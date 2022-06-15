@@ -22,7 +22,7 @@ public class HeroAttack : Attacker {
 
         _nextAttackTime = Time.time + 1f / _hero.Stats.AttackSpeed;
     }
-    
+
     // Sync animation hero attack with take enemy damage
     public virtual IEnumerator AttackDelay() {
 
@@ -31,10 +31,10 @@ public class HeroAttack : Attacker {
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _hero.Stats.AttackRange,_enemyLayers);
 
-        foreach(var enemy in hitEnemies) {
+        foreach(var enemyLayer in hitEnemies) {
 
-            var _enemy = enemy.GetComponent<Enemy>();
-            _enemy.TakeDamage((uint)_hero.Stats.Damage);
+            var enemy = enemyLayer.GetComponent<Enemy>();
+            enemy.TakeDamage((uint)_hero.Stats.Damage);
         }
 
         // Waited when animation end and change state
