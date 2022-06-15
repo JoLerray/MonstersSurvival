@@ -31,9 +31,9 @@ public class HeroAttack : Attacker {
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _hero.Stats.AttackRange,_enemyLayers);
 
-        foreach(var enemyLayer in hitEnemies) {
+        foreach(var enemyCollider in hitEnemies) {
 
-            var enemy = enemyLayer.GetComponent<Enemy>();
+            var enemy = enemyCollider.GetComponent<Enemy>();
             enemy.TakeDamage((uint)_hero.Stats.Damage);
         }
 
