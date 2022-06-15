@@ -10,7 +10,7 @@ public class PlayerAttack : Attacker {
 
     public override void Attack() {
 
-        _player.Behaviour.SetBehaviourAttacking();
+        _player.Hero.Behaviour.SetBehaviourAttacking();
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _player.Hero.Stats.AttackRange,_enemyLayers);
 
@@ -18,7 +18,7 @@ public class PlayerAttack : Attacker {
 
             var _enemy = enemy.GetComponent<Enemy>();
 
-            _enemy.TakeDamage((uint)_player.Hero.Stats.Damage, () => { _player.Behaviour.SetBehaviorTakingDamage();});
+            _enemy.TakeDamage((uint)_player.Hero.Stats.Damage);
         }
     }
 

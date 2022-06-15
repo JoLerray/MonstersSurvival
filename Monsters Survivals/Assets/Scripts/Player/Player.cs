@@ -8,16 +8,7 @@ public sealed class Player : MonoBehaviour {
     
     [SerializeField] private Attacker _attack;
     
-    private PlayerBehaviour _behaviour;
-
-    public PlayerBehaviour Behaviour { get {return _behaviour;}}
-
     public Hero Hero {get {return _hero;}}
-
-    private void Start() {
-
-        _behaviour = new PlayerBehaviour(_hero);
-    }
 
     private void FixedUpdate() {
 

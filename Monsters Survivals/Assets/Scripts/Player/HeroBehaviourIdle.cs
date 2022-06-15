@@ -1,7 +1,7 @@
 
-public sealed class PlayerBehaviourIdle : PlayerHeroBehaviour  {
+public sealed class HeroBehaviourIdle : PlayerHeroBehaviour  {
 
-    public PlayerBehaviourIdle(Hero hero) : base(hero) {}
+    public HeroBehaviourIdle(Hero hero) : base(hero) {}
 
     public override void Enter() {
         

@@ -1,7 +1,7 @@
 
-public sealed class PlayerBehaviourDeath : PlayerHeroBehaviour {
+public sealed class HeroBehaviourDeath : PlayerHeroBehaviour {
 
-    public PlayerBehaviourDeath(Hero hero):base(hero) {}
+    public HeroBehaviourDeath(Hero hero):base(hero) {}
 
     public override void Enter() {
         

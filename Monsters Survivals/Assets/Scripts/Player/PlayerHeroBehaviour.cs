@@ -1,6 +1,6 @@
 using System;
 
-public abstract class PlayerHeroBehaviour : IPlayerBehaviour
+public abstract class PlayerHeroBehaviour : IBehaviour
 {
     public readonly Hero _hero;
 

@@ -42,10 +42,10 @@ class PlayerMovement: MovementObject {
     private void ChangePlayerState(Vector2 velocity) {
 
         if (velocity == Vector2.zero)
-            _player.Behaviour.SetBehaviourIdle();
+            _player.Hero.Behaviour.SetBehaviourIdle();
 
         else
-            _player.Behaviour.SetBehaviourRun();
+            _player.Hero.Behaviour.SetBehaviourRun();
     }
 }
 

@@ -3,9 +3,8 @@ using System;
 
 public class Enemy : Character {
     
-    public override void TakeDamage(uint damage, Action action = null) {
+    public override void TakeDamage(uint damage) {
         
-        action.Invoke();
         Stats.HealthPoints -= damage;
         Debug.Log("HealthPoints = " + Stats.HealthPoints);
     }

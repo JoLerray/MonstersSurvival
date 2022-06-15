@@ -13,5 +13,5 @@ public abstract class Character : MonoBehaviour
             throw new ArgumentNullException("Not set Character STATS !");
     }
 
-    public abstract void TakeDamage(uint damage, Action action);
+    public abstract void TakeDamage(uint damage);
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IPlayerBehaviour {
+public interface IBehaviour {
     
     void Enter();
 
