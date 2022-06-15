@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public  class HeroBehaviour
+public class HeroBehaviour
 {
     private Dictionary<Type,IBehaviour> _behaviourMap;
     
@@ -84,4 +84,9 @@ public  class HeroBehaviour
         SetBehavior(behaviour);
     }
 
+    private void Update() {
+
+        if(_behaviourCurrent != null)
+             _behaviourCurrent.Update();
+    }
 }

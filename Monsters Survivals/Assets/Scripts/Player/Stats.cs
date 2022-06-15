@@ -22,6 +22,14 @@ public class Stats : MonoBehaviour
     [SerializeField] private float _maxAttackRange;
     [SerializeField] private float _maxHealthRegeneration;
 
+     public float MaxHealthPoints {get {return _maxHealthPoints;}}
+    public float MaxDamage {get {return _maxDamage;}}
+    public float MaxArmor {get {return _maxArmor;}}
+    public float MaxMoveSpeed {get {return _maxMoveSpeed;}}
+    public float MaxAttackSpeed {get {return _maxAttackSpeed;}}
+    public float MaxAttackRange {get {return _maxAttackRange;}}
+    public float MaxHealthRegeneration {get {return _maxHealthRegeneration;}}
+
 //Current Stats
 
     private float _healthPoints;
@@ -39,6 +47,8 @@ public class Stats : MonoBehaviour
     public float AttackSpeed {get {return _attackSpeed;} set {_attackSpeed = value;}}
     public float AttackRange {get {return _attackRange;} set {_attackRange = value;}}
     public float HealthRegeneration {get {return _healthRegeneration;} set {_healthRegeneration =value;}}
+
+
 
     private void Start() {
 

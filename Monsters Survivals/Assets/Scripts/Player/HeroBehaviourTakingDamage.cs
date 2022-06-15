@@ -1,11 +1,11 @@
 
-public sealed class HeroBehaviourTakingDamage : PlayerHeroBehaviour {
+public class HeroBehaviourTakingDamage : PlayerHeroBehaviour {
 
     public HeroBehaviourTakingDamage(Hero hero) : base(hero) {}
 
     public override void Enter() {
 
-        _hero.AnimationPlayer.PlayAnimationTakeDamage();
+        Hero.AnimationPlayer.PlayAnimationTakeDamage();
     }
 
     public override void Exit() {

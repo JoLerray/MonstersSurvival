@@ -1,11 +1,11 @@
 
-public sealed class HeroBehaviourIdle : PlayerHeroBehaviour  {
+public class HeroBehaviourIdle : PlayerHeroBehaviour  {
 
     public HeroBehaviourIdle(Hero hero) : base(hero) {}
 
     public override void Enter() {
         
-        _hero.AnimationPlayer.PlayAnimationIdle();
+        Hero.AnimationPlayer.PlayAnimationIdle();
     }
 
     public override void Exit() {

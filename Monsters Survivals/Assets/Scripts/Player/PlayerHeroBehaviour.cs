@@ -2,12 +2,12 @@ using System;
 
 public abstract class PlayerHeroBehaviour : IBehaviour
 {
-    public readonly Hero _hero;
+    public readonly Hero Hero;
 
     public PlayerHeroBehaviour(Hero hero) {
         
         if(hero == null) throw new ArgumentNullException("Hero is NULL !");
-        _hero = hero;
+        Hero = hero;
     }
 
     abstract public void Enter();

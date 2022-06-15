@@ -48403,9 +48403,9 @@ GameObject:
   - component: {fileID: 1588770670}
   - component: {fileID: 1588770677}
   - component: {fileID: 1588770675}
-  - component: {fileID: 1588770676}
-  - component: {fileID: 1588770671}
   - component: {fileID: 1588770672}
+  - component: {fileID: 1588770679}
+  - component: {fileID: 1588770678}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -48531,19 +48531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stats: {fileID: 1588770677}
   _animationPlayer: {fileID: 1588770675}
---- !u!114 &1588770671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588770661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17256d880d06d974c923214dc43c701b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1588770673}
 --- !u!50 &1588770672
 Rigidbody2D:
   serializedVersion: 4
@@ -48578,8 +48565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hero: {fileID: 1588770670}
-  _movement: {fileID: 1588770671}
-  _attack: {fileID: 1588770676}
+  _movement: {fileID: 1588770679}
+  _attack: {fileID: 1588770678}
 --- !u!114 &1588770675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48592,24 +48579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5669913f87856864ba799f3419af30ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hero: {fileID: 1588770670}
   _animator: {fileID: 1588770669}
---- !u!114 &1588770676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588770661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65fc6731df1483b418c99e9ce25a7655, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1588770673}
-  _attackPoint: {fileID: 432633908}
-  _enemyLayers:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &1588770677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48633,10 +48604,41 @@ MonoBehaviour:
   _maxHealthPoints: 0
   _maxDamage: 5
   _maxArmor: 0
-  _maxMoveSpeed: 3
-  _maxAttackSpeed: 0
-  _maxAttackRange: 0.25
+  _maxMoveSpeed: 5
+  _maxAttackSpeed: 1
+  _maxAttackRange: 1
   _maxHealthRegeneration: 0
+--- !u!114 &1588770678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588770661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebde9e33b1c982c4b90438ad8b40a2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hero: {fileID: 1588770670}
+  _attackPoint: {fileID: 432633908}
+  _enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  _baseAttackDelay: 0.9
+--- !u!114 &1588770679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588770661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14aea3f84136eff4087e9f5349ca3f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hero: {fileID: 1588770670}
 --- !u!1 &1928513211
 GameObject:
   m_ObjectHideFlags: 0
