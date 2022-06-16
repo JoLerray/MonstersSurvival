@@ -1,5 +1,4 @@
-public class HeroBehaviourAttacking : PlayerHeroBehaviour
-{
+public class HeroBehaviourAttacking : PlayerHeroBehaviour {
     public HeroBehaviourAttacking(Hero hero) : base(hero) {}
 
     public override void Enter() {
@@ -7,11 +6,7 @@ public class HeroBehaviourAttacking : PlayerHeroBehaviour
         Hero.HeroAnimationSwitcher.PlayAnimationAttack();
     }
 
-    public override void Exit() {
-
-    }
+    public override void Exit() {}
     
-    public override void Update() {
-
-    }
+    public override void Update() {}
 }

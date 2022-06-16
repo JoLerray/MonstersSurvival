@@ -8,11 +8,7 @@ public class HeroBehaviourDeath : PlayerHeroBehaviour {
         Hero.HeroAnimationSwitcher.PlayAnimationDeath();
     }
 
-    public override void Exit() {
-
-    }
+    public override void Exit() {}
     
-    public override void Update() {
-        
-    }
+    public override void Update() {}
 }

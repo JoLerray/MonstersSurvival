@@ -8,11 +8,7 @@ public class HeroBehaviourRun : PlayerHeroBehaviour {
         Hero.HeroAnimationSwitcher.PlayAnimationRun();
     }
 
-    public override void Exit() {
-        
-    }
+    public override void Exit() {}
     
-    public override void Update() {
-        
-    }
+    public override void Update() {}
 }

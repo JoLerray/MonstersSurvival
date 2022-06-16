@@ -5,8 +5,7 @@ using UnityEngine;
 [RequireComponent (typeof (HeroMovement))] 
 [RequireComponent (typeof (HeroAnimationSwitcher))] 
 
-public class Hero: Character 
-{  
+public class Hero: Character {  
     [SerializeField] private HeroAnimationSwitcher _animationSwitcher;
     
     [SerializeField] private HeroMovement _movement;
@@ -15,9 +14,13 @@ public class Hero: Character
 
     private HeroBehaviour _behaviour;
 
+    private SpriteRenderer _spriteRenderer;
+
     public HeroBehaviour Behaviour { get {return _behaviour;}}
 
     public HeroAnimationSwitcher HeroAnimationSwitcher {get {return _animationSwitcher;}}
+
+    public SpriteRenderer SpriteRenderer{get {return _spriteRenderer;}}
 
     public override void TakeDamage(uint damage) {
 
@@ -28,6 +31,7 @@ public class Hero: Character
     private void Start() {
 
         _behaviour = new HeroBehaviour(this);
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void Move() {

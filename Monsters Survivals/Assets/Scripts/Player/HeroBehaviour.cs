@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class HeroBehaviour
-{
+public class HeroBehaviour {
     private Dictionary<Type,IBehaviour> _behaviourMap;
     
     private IBehaviour _behaviourCurrent;

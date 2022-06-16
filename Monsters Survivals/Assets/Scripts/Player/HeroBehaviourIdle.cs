@@ -8,11 +8,7 @@ public class HeroBehaviourIdle : PlayerHeroBehaviour  {
         Hero.HeroAnimationSwitcher.PlayAnimationIdle();
     }
 
-    public override void Exit() {
-
-    }
+    public override void Exit() {}
     
-    public override void Update() {
-        
-    }
+    public override void Update() {}
 }

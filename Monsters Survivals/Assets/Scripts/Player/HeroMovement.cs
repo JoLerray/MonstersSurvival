@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 
 public 
-class HeroMovement: MovementObject {
+class HeroMovement: MovementCharacter {
    
     private Hero _hero;
 

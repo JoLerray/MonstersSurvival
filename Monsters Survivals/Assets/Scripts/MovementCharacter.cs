@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class MovementObject : MonoBehaviour {
+public abstract class MovementCharacter : MonoBehaviour {
     
     public abstract void Movement();
 }

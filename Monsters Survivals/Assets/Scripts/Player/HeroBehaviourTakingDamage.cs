@@ -8,11 +8,7 @@ public class HeroBehaviourTakingDamage : PlayerHeroBehaviour {
         Hero.HeroAnimationSwitcher.PlayAnimationTakeDamage();
     }
 
-    public override void Exit() {
-
-    }
+    public override void Exit() {}
     
-    public override void Update() {
-        
-    }
+    public override void Update() {}
 }
