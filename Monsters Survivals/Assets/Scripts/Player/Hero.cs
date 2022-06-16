@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class Hero : Character
 {  
-    [SerializeField] private HeroAnimationSwicher _animationPlayer;
-    
+   
     private HeroBehaviour _behaviour;
 
     public HeroBehaviour Behaviour { get {return _behaviour;}}
 
-    public HeroAnimationSwicher AnimationPlayer {get {return _animationPlayer;}}
+    public HeroAnimationSwicher HeroAnimationSwicher {get { return (HeroAnimationSwicher) HeroAnimationSwicher;}}
 
     public override void TakeDamage(uint damage) {
 

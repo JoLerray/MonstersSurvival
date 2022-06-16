@@ -1,24 +1,25 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Hero))]
+[RequireComponent(typeof(Enemy))]
 
-public class HeroAnimationSwicher : CharacterAnimationSwicher {
-    
-    private Hero _hero;
-   
-    private void Start() {
-        _hero = GetComponent<Hero>();
+public class EnemyAnimationSwicher : CharacterAnimationSwicher
+{
+    private Enemy _enemy;
+
+    private void Start() {    
+        
+        _enemy = GetComponent<Enemy>();
     }
 
     public override void PlayAnimationRun() {
 
-       Animator.speed = _hero.Stats.MoveSpeed / 5;
+       Animator.speed = _enemy.Stats.MoveSpeed / 5;
        Animator.SetBool("isRunning", true);
     }
 
     public override void PlayAnimationAttack() {
           
-        Animator.speed = _hero.Stats.AttackSpeed;
+        Animator.speed = _enemy.Stats.AttackSpeed;
         Animator.SetTrigger("Attack");
     }
 

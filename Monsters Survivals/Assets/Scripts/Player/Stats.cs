@@ -1,7 +1,7 @@
 using UnityEngine;
 
-public class Stats : MonoBehaviour
-{
+public class Stats : MonoBehaviour {
+    
     [SerializeField] private uint _level;
 
     [SerializeField] private float _healthPointsIncreasePerLevel;
@@ -22,7 +22,7 @@ public class Stats : MonoBehaviour
     [SerializeField] private float _maxAttackRange;
     [SerializeField] private float _maxHealthRegeneration;
 
-     public float MaxHealthPoints {get {return _maxHealthPoints;}}
+    public float MaxHealthPoints {get {return _maxHealthPoints;}}
     public float MaxDamage {get {return _maxDamage;}}
     public float MaxArmor {get {return _maxArmor;}}
     public float MaxMoveSpeed {get {return _maxMoveSpeed;}}
@@ -47,8 +47,6 @@ public class Stats : MonoBehaviour
     public float AttackSpeed {get {return _attackSpeed;} set {_attackSpeed = value;}}
     public float AttackRange {get {return _attackRange;} set {_attackRange = value;}}
     public float HealthRegeneration {get {return _healthRegeneration;} set {_healthRegeneration =value;}}
-
-
 
     private void Start() {
 

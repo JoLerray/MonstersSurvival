@@ -1,19 +1,19 @@
 using UnityEngine;
 
-
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
 
 public 
 class HeroMovement: MovementObject {
    
-    [SerializeField] private Hero _hero;
+    [SerializeField]  private Hero _hero;
 
     private Rigidbody2D _rigidBodyPlayer;
 
     private void Start() {
 
-        _rigidBodyPlayer = GetComponent<Rigidbody2D>();       
+        _rigidBodyPlayer = GetComponent<Rigidbody2D>();   
+       
     }
 
 
