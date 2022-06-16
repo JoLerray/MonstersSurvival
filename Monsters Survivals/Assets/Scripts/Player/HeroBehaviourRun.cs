@@ -5,7 +5,7 @@ public class HeroBehaviourRun : PlayerHeroBehaviour {
 
     public override void Enter() {
         
-        Hero.AnimationPlayer.PlayAnimationRun();
+        Hero.HeroAnimationSwitcher.PlayAnimationRun();
     }
 
     public override void Exit() {
