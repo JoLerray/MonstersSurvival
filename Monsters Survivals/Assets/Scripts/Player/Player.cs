@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Hero))]
+
 public sealed class Player : MonoBehaviour {
     
     [SerializeField] private Hero _hero;

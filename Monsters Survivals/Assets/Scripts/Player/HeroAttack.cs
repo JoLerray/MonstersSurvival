@@ -1,17 +1,24 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(Hero))] 
+
 public class HeroAttack : Attacker {
 
-    [SerializeField] private Hero _hero;
-    
     [SerializeField] private Transform _attackPoint;
 
     [SerializeField] private LayerMask _enemyLayers;
 
     [SerializeField] private float _baseAttackDelay;
 
+    private Hero _hero;
+
     private float _nextAttackTime = 0f;
+
+    private void Start() {
+
+        _hero = GetComponent<Hero>();
+    }
 
     public override void Attack() {
 

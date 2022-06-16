@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class HeroAnimationSwicher : MonoBehaviour
+public class HeroAnimationSwitcher : MonoBehaviour
 {
 
     [SerializeField] private Hero _hero;
