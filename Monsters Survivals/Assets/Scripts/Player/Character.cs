@@ -1,16 +1,17 @@
 using UnityEngine;
 using System;
 
+[RequireComponent (typeof(Stats))]
+
 public abstract class Character : MonoBehaviour
 {
-    [SerializeField] private Stats _stats;
+    private Stats _stats;
 
     public Stats Stats {get {return _stats;}}
     
-    private void Start() {
+    private void Awake() {
 
-        if(_stats == null)
-            throw new ArgumentNullException("Not set Character STATS !");
+        _stats = GetComponent<Stats>();
     }
 
     public abstract void TakeDamage(uint damage);

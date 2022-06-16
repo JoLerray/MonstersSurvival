@@ -11,7 +11,7 @@ class HeroMovement: MovementObject {
 
     private Rigidbody2D _rigidBodyPlayer;
 
-    private void Start() {
+    private void Awake() {
         
         _hero = GetComponent<Hero>();
         _rigidBodyPlayer = GetComponent<Rigidbody2D>();       

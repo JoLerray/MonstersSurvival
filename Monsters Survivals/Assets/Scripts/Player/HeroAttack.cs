@@ -13,7 +13,7 @@ public class HeroAttack : Attacker {
     
     private float _nextAttackTime = 0f;
 
-    private void Start() {
+    private void Awake() {
         
         _hero = GetComponent<Hero>();
     }

@@ -1,4 +1,4 @@
-public sealed class HeroBehaviourAttacking : PlayerHeroBehaviour
+public class HeroBehaviourAttacking : PlayerHeroBehaviour
 {
     public HeroBehaviourAttacking(Hero hero) : base(hero) {}
 

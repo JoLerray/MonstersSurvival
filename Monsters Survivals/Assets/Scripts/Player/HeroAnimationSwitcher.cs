@@ -1,17 +1,19 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Hero))]
+
 public class HeroAnimationSwitcher : MonoBehaviour
 {
 
-    [SerializeField] private Hero _hero;
-    [SerializeField] private  Animator _animator;
+    private Hero _hero;
+    private  Animator _animator;
    
-    private void Start()
-    {
+    private void Awake() {
         _animator = GetComponent<Animator>();
+        _hero = GetComponent<Hero>();
     }
-
+    
     public void PlayAnimationRun() {
 
        _animator.speed = _hero.Stats.MoveSpeed / 5;

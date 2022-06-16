@@ -17,7 +17,6 @@ public class HeroBehaviour
 
         InitBehaviour();
         SetBehaviorByDefault();
-        
     }
 
     private void InitBehaviour() {
