@@ -48641,7 +48641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebde9e33b1c982c4b90438ad8b40a2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hero: {fileID: 1588770670}
   _attackPoint: {fileID: 432633908}
   _enemyLayers:
     serializedVersion: 2
@@ -48659,7 +48658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14aea3f84136eff4087e9f5349ca3f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hero: {fileID: 1588770670}
 --- !u!1 &1928513211
 GameObject:
   m_ObjectHideFlags: 0
