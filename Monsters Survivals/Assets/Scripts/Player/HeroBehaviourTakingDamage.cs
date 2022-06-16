@@ -5,7 +5,7 @@ public class HeroBehaviourTakingDamage : PlayerHeroBehaviour {
 
     public override void Enter() {
 
-        Hero.HeroAnimationSwicher.PlayAnimationTakeDamage();
+        Hero.AnimationPlayer.PlayAnimationTakeDamage();
     }
 
     public override void Exit() {

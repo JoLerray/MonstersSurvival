@@ -1,44 +1,52 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Hero))]
+[RequireComponent(typeof(Animator))]
+public class HeroAnimationSwicher : MonoBehaviour
+{
 
-public class HeroAnimationSwicher : CharacterAnimationSwicher {
-    
-    private Hero _hero;
+    [SerializeField] private Hero _hero;
+    [SerializeField] private  Animator _animator;
    
-    private void Start() {
-        _hero = GetComponent<Hero>();
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
     }
 
-    public override void PlayAnimationRun() {
+    public void PlayAnimationRun() {
 
-       Animator.speed = _hero.Stats.MoveSpeed / 5;
-       Animator.SetBool("isRunning", true);
+       _animator.speed = _hero.Stats.MoveSpeed / 5;
+
+       _animator.SetBool("isRunning", true);
     }
 
-    public override void PlayAnimationAttack() {
+    public void PlayAnimationAttack() {
           
-        Animator.speed = _hero.Stats.AttackSpeed;
-        Animator.SetTrigger("Attack");
+        _animator.speed = _hero.Stats.AttackSpeed;
+
+        _animator.SetTrigger("Attack");
     }
 
-    public override void PlayAnimationTakeDamage() {
+    public void PlayAnimationTakeDamage() {
 
-        Animator.speed = 1;
-        Animator.SetTrigger("TakeHit");
+        _animator.speed = 1;
+
+        _animator.SetTrigger("TakeHit");
     }
 
-    public override void PlayAnimationIdle() {
+    public void PlayAnimationIdle() {
           
-        Animator.speed = 1;
-        Animator.SetBool("isRunning", false);
-        Animator.SetBool("isTakeDamage", false);
-        Animator.SetBool("isAttacking", false);
+        _animator.speed = 1;
+
+        _animator.SetBool("isRunning", false);
+        _animator.SetBool("isTakeDamage", false);
+        _animator.SetBool("isAttacking", false);
     }
 
-    public override void PlayAnimationDeath() {
+    public void PlayAnimationDeath() {
         
-        Animator.speed = 1;
-        Animator.SetBool("isLive", false);
+        _animator.speed = 1;
+
+        _animator.SetBool("isLive", false);
     }
+    
 }

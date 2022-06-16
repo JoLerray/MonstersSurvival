@@ -4,7 +4,7 @@ public sealed class HeroBehaviourAttacking : PlayerHeroBehaviour
 
     public override void Enter() {
 
-        Hero.HeroAnimationSwicher.PlayAnimationAttack();
+        Hero.AnimationPlayer.PlayAnimationAttack();
     }
 
     public override void Exit() {

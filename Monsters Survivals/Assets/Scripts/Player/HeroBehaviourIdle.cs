@@ -5,7 +5,7 @@ public class HeroBehaviourIdle : PlayerHeroBehaviour  {
 
     public override void Enter() {
         
-        Hero.HeroAnimationSwicher.PlayAnimationIdle();
+        Hero.AnimationPlayer.PlayAnimationIdle();
     }
 
     public override void Exit() {

@@ -5,7 +5,7 @@ public class HeroBehaviourDeath : PlayerHeroBehaviour {
 
     public override void Enter() {
         
-        Hero.HeroAnimationSwicher.PlayAnimationDeath();
+        Hero.AnimationPlayer.PlayAnimationDeath();
     }
 
     public override void Exit() {
