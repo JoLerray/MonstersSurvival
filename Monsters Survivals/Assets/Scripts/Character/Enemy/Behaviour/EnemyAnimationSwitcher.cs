@@ -1,30 +1,26 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(Hero))]
+public class EnemyAnimationSwitcher : MonoBehaviour {
 
-public class HeroAnimationSwitcher : MonoBehaviour
-{
-
-    private Hero _hero;
-    
-    private Animator _animator;
+    private Enemy _enemy;
+    private  Animator _animator;
    
     private void Awake() {
+
         _animator = GetComponent<Animator>();
-        _hero = GetComponent<Hero>();
+        _enemy = GetComponent<Enemy>();
     }
     
     public virtual void PlayAnimationRun() {
 
-       _animator.speed = _hero.Stats.MoveSpeed / 5;
+       _animator.speed = _enemy.Stats.MoveSpeed / 5;
 
-       _animator.SetBool("isRunning", true);
+       _animator.SetBool("isRun", true);
     }
 
     public virtual void PlayAnimationAttack() {
           
-        _animator.speed = _hero.Stats.AttackSpeed;
+        _animator.speed = _enemy.Stats.AttackSpeed;
 
         _animator.SetTrigger("Attack");
     }
@@ -32,15 +28,14 @@ public class HeroAnimationSwitcher : MonoBehaviour
     public virtual void PlayAnimationTakeDamage() {
 
         _animator.speed = 1;
-
-        _animator.SetTrigger("TakeHit");
+        _animator.SetTrigger("TakeDamage");
     }
 
     public virtual void PlayAnimationIdle() {
           
         _animator.speed = 1;
 
-        _animator.SetBool("isRunning", false);
+        _animator.SetBool("isRun", false);
     }
 
     public virtual void PlayAnimationDeath() {
@@ -49,5 +44,4 @@ public class HeroAnimationSwitcher : MonoBehaviour
 
         _animator.SetBool("isLive", false);
     }
-    
 }

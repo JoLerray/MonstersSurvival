@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class EnemyTakeDamageBehaviour : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+public class EnemyTakeDamageBehaviour : BaseEnemyBehaviour {
+
+    public EnemyTakeDamageBehaviour(Enemy enemy) : base (enemy) {}
+
+    public override void Enter() {
         
+        Enemy.AnimationSwitcher.PlayAnimationTakeDamage();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public override void Exit() {
+
+    }
+
+    public override void Update() {
+
     }
 }

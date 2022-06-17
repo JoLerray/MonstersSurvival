@@ -5,8 +5,11 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour
 {
     [SerializeField] private Player _player;
-    [SerializeField] private Vector4 MapSize;
     
+    [SerializeField] private Vector4 _mapSize;
+    
+    public Vector4 MapSize {get{ return _mapSize;}}
+
     private Camera _camera;
 
     private void Start() {
@@ -16,14 +19,14 @@ public class PlayerCamera : MonoBehaviour
 
     void Update()
     {
-        var x = Mathf.Clamp(_player.transform.position.x, MapSize.x +_camera.orthographicSize * 2,MapSize.y - _camera.orthographicSize * 2);
-        var y = Mathf.Clamp(_player.transform.position.y, MapSize.z +_camera.orthographicSize,MapSize.w -_camera.orthographicSize);
+        var x = Mathf.Clamp(_player.transform.position.x, _mapSize.x +_camera.orthographicSize * 2,_mapSize.y - _camera.orthographicSize * 2);
+        var y = Mathf.Clamp(_player.transform.position.y, _mapSize.z +_camera.orthographicSize,_mapSize.w -_camera.orthographicSize);
        
         transform.position = new Vector3(x , y , transform.position.z);
        
     }
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(new Vector2(MapSize.x ,MapSize.z), new Vector2(MapSize.y ,MapSize.w));
+        Gizmos.DrawLine(new Vector2(_mapSize.x ,_mapSize.z), new Vector2(_mapSize.y ,_mapSize.w));
     }
 }

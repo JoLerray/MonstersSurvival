@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class EnemyDeathBehaviour : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class EnemyDeathBehaviour  : BaseEnemyBehaviour {
+
+    public EnemyDeathBehaviour(Enemy enemy) : base (enemy) {}
+
+    public override void Enter() {
+
+        Enemy.AnimationSwitcher.PlayAnimationDeath();
+    }
+    
+    public override void Exit() {
+    
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public override void Update() {
         
     }
 }

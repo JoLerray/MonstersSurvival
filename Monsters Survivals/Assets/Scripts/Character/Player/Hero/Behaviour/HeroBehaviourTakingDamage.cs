@@ -1,3 +1,4 @@
+using UnityEngine;
 
 public class HeroBehaviourTakingDamage : PlayerHeroBehaviour {
 
@@ -5,7 +6,7 @@ public class HeroBehaviourTakingDamage : PlayerHeroBehaviour {
 
     public override void Enter() {
 
-        Hero.HeroAnimationSwitcher.PlayAnimationTakeDamage();
+        Hero.AnimationSwitcher.PlayAnimationTakeDamage();
     }
 
     public override void Exit() {}

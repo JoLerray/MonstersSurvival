@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class EnemyIdleBehaviour : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class EnemyIdleBehaviour  : BaseEnemyBehaviour {
+
+    public EnemyIdleBehaviour(Enemy enemy) : base (enemy) {}
+
+    public override void Enter() {
+
+        Enemy.AnimationSwitcher.PlayAnimationIdle();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public override void Exit() {
         
+    }
+    
+    public override void Update() {
+      
     }
 }

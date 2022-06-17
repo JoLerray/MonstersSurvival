@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class EnemyAttackBehaviour : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+public class EnemyAttackBehaviour  : BaseEnemyBehaviour {
+
+    public EnemyAttackBehaviour(Enemy enemy) : base (enemy) {}
+
+    public override void Enter() {
+
+        Enemy.AnimationSwitcher.PlayAnimationAttack();
+    }
+
+    public override void Exit() {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public override void Update() {
         
     }
 }

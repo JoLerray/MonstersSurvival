@@ -9,12 +9,12 @@ class HeroMovement: MovementCharacter {
    
     private Hero _hero;
 
-    private Rigidbody2D _rigidBodyPlayer;
+    private Rigidbody2D _rigidBody;
 
     private void Awake() {
         
         _hero = GetComponent<Hero>();
-        _rigidBodyPlayer = GetComponent<Rigidbody2D>();       
+        _rigidBody = GetComponent<Rigidbody2D>();       
     }
 
 
@@ -22,14 +22,14 @@ class HeroMovement: MovementCharacter {
 
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         
-        _rigidBodyPlayer.velocity = moveInput * _hero.Stats.MoveSpeed;
+        _rigidBody.velocity = moveInput * _hero.Stats.MoveSpeed;
         
-        FlipPlayerHorizontal (Mathf.RoundToInt(_rigidBodyPlayer.velocity.x));
+        FlipHeroHorizontal (Mathf.RoundToInt(_rigidBody.velocity.x));
        
-        ChangePlayerState(_rigidBodyPlayer.velocity);
+        ChangeHeroState(_rigidBody.velocity);
     }
 
-    private void FlipPlayerHorizontal(int velocityHorizontal) {
+    private void FlipHeroHorizontal(int velocityHorizontal) {
           
         if(velocityHorizontal == 0) return;
 
@@ -41,7 +41,7 @@ class HeroMovement: MovementCharacter {
 
     }
 
-    private void ChangePlayerState(Vector2 velocity) {
+    private void ChangeHeroState(Vector2 velocity) {
 
         if (velocity == Vector2.zero)
             _hero.Behaviour.SetBehaviourIdle();

@@ -3,7 +3,7 @@ public class HeroBehaviourAttacking : PlayerHeroBehaviour {
 
     public override void Enter() {
 
-        Hero.HeroAnimationSwitcher.PlayAnimationAttack();
+        Hero.AnimationSwitcher.PlayAnimationAttack();
     }
 
     public override void Exit() {}

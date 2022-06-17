@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class EnemyRunBehaviour : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class EnemyRunBehaviour  : BaseEnemyBehaviour {
+
+    public EnemyRunBehaviour(Enemy enemy) : base (enemy) {}
+
+    public override void Enter() {
+
+        Enemy.AnimationSwitcher.PlayAnimationRun();
+    }
+    
+    public override void Exit() {
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public override void Update() {
+
     }
 }
