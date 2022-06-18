@@ -83,7 +83,7 @@ public class EnemyBehaviour {
     }
 
     private void Update() {
-
+        
         if(_behaviourCurrent != null)
              _behaviourCurrent.Update();
     }

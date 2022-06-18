@@ -26,8 +26,8 @@ public class Hero: Character {
     public override void TakeDamage(uint damage) {
 
         Stats.HealthPoints -= damage;
-        Debug.Log("Hero HP" + Stats.HealthPoints);
         _behaviour.SetBehaviorTakingDamage();
+        if (Stats.HealthPoints <= 0) Behaviour.SetBehaviorDeath();
         
     }
 

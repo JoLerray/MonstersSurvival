@@ -11,6 +11,8 @@ public class EnemyAttack : Attacker {
 
     [SerializeField] private float _baseAttackDelay;
 
+    [SerializeField] private Vector2 _pushForce;
+
     private Enemy _enemy;
     
     private float _nextAttackTime = 0f;
@@ -22,10 +24,13 @@ public class EnemyAttack : Attacker {
 
     public override void Attack() {
 
+        if(_enemy.Stats.HealthPoints <= 0) return;
+        
         if(Time.time < _nextAttackTime) return;
-
+        
         StartCoroutine(AttackDelay());
-
+        _enemy.Behaviour.SetBehaviourAttacking();
+        _enemy.Movement.isStay = true;
         _nextAttackTime = Time.time + 1f / _enemy.Stats.AttackSpeed;
     }
 
@@ -40,11 +45,12 @@ public class EnemyAttack : Attacker {
 
             var enemy = enemyCollider.GetComponent<Hero>();
             enemy.TakeDamage((uint)_enemy.Stats.Damage);
+            PushAwayHero(enemy);
         }
+    }
 
-        // Waited when animation end and change state
-        yield return new WaitForSeconds(_baseAttackDelay / (_enemy.Stats.AttackSpeed + _baseAttackDelay) );
-        //_enemy.Behaviour.SetBehaviourIdle();
-        
+    private void PushAwayHero(Hero hero) {
+
+        hero.transform.position += new Vector3(_pushForce.x * _enemy.Movement.GetDirectionEnemy().x, _pushForce.y * _enemy.Movement.GetDirectionEnemy().y, 0f);
     }
 }

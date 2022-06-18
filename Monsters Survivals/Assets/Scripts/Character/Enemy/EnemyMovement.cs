@@ -2,7 +2,6 @@ using UnityEngine;
 using System;
 
 [RequireComponent(typeof(Enemy))]
-[RequireComponent(typeof(BoxCollider2D))]
 
 public class EnemyMovement : MovementCharacter {
 
@@ -71,7 +70,7 @@ public class EnemyMovement : MovementCharacter {
             targetPos = new Vector2( UnityEngine.Random.Range(_enemy.transform.position.x - _searchRadius, _enemy.transform.position.x + _searchRadius), UnityEngine.Random.Range(_enemy.transform.position.y  - _searchRadius, _enemy.transform.position.y + _searchRadius));
     }
     
-    private  Vector2 GetDirectionEnemy() {
+    public Vector2 GetDirectionEnemy() {
        
         Vector2 vectorBetweenEnemyAndHero = GetVectorBetweenEnemyAndTargetPoint();
 

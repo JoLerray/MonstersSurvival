@@ -29,18 +29,23 @@ public class Enemy : Character {
         
         Stats.HealthPoints -= damage;
         Behaviour.SetBehaviorTakingDamage();
-        Debug.Log("HealthPoints = " + Stats.HealthPoints);
+        
+        if (Stats.HealthPoints <= 0) {
+            
+            Behaviour.SetBehaviorDeath();
+            Destroy(gameObject, 1);
+        }
     }
 
     private void Start() {
 
         _behaviour = new EnemyBehaviour(this);
         _spriteRenderer = GetComponent<SpriteRenderer>();
-
-        _movement.Movement();
     }
 
     private void Update() {
+
+        if(Stats.HealthPoints <= 0) return;
         
         if(Movement.isStay == false) _movement.Movement();
     }
@@ -49,6 +54,14 @@ public class Enemy : Character {
         
         if(other.GetComponent<Hero>() != null){
             Movement.Stay();
+            Attack.Attack();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
+       
+        if(other.GetComponent<Hero>() != null){
+            Attack.Attack();
         }
     }
 

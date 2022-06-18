@@ -6,6 +6,7 @@ public class EnemyTakeDamageBehaviour : BaseEnemyBehaviour {
     public override void Enter() {
         
         Enemy.AnimationSwitcher.PlayAnimationTakeDamage();
+        Enemy.Movement.Stay();
     }
 
     public override void Exit() {
