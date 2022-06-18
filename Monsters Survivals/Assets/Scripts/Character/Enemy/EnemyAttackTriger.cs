@@ -20,7 +20,6 @@ public class EnemyAttackTriger : MonoBehaviour {
       
         if(_hero != null) {
            StartCoroutine(Attack());
-           _enemy.Movement.isStay = true;
         }
     }
     
@@ -29,8 +28,6 @@ public class EnemyAttackTriger : MonoBehaviour {
         if (other.GetComponent<Hero>() != null) {
             StopCoroutine(Attack());
             _enemy.Behaviour.SetBehaviourIdle();
-            Debug.Log("Hero Exit");
-            _enemy.Movement.isStay = false;
         }
     }
 
