@@ -52765,7 +52765,7 @@ MonoBehaviour:
   _maxDamage: 13.59
   _maxArmor: 0
   _maxMoveSpeed: 5
-  _maxAttackSpeed: 2
+  _maxAttackSpeed: 1
   _maxAttackRange: 1
   _maxHealthRegeneration: 0
 --- !u!114 &1929426977
