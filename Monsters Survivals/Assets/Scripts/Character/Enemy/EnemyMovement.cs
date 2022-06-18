@@ -12,7 +12,7 @@ public class EnemyMovement : MovementCharacter {
 
     [SerializeField] private PlayerCamera _playerCamera;               
 
-        private Enemy _enemy;
+    private Enemy _enemy;
 
     private Vector2 targetPos;
 
